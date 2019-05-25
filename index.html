@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btnBox {
+            width: 300px;
+            height: 30px;
+            background: red;
+            margin: 100px auto 0;
+        }
+
+        .btnBox span {
+            float: left;
+            width: 100px;
+            height: 30px;
+            background: #ccc;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            font-weight: 900;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        .btnBox .active {
+            background: red;
+        }
+
+        .conShow {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background: #ccc;
+        }
+
+        .conShow div {
+            width: 300px;
+            height: 300px;
+            background: #000;
+            text-align: center;
+            font-size: 100px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 300px;
+            display: none;
+        }
+
+        .conShow .divShow {
+            display: block
+        }
+
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        .show {
+            width: 800px;
+            height: 300px;
+            background: orange;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .imgBox {
+            height: 300px;
+            position: absolute
+        }
+
+        .imgBox img {
+            width: 800px;
+            height: 300px;
+            float: left;
+        }
+
+        .show span {
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background: rgba(0, 0, 0, .6);
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            font-weight: 900;
+            position: absolute;
+            top: 125px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .show span:nth-of-type(1) {
+            left: 20px;
+        }
+
+        .show span:nth-of-type(2) {
+            right: 20px;
+        }
+
+
+        .radiusBox {
+            width: 100%;
+            height: 20px;
+            position: absolute;
+            bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .radiusBox li {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .radiusBox .active {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btnBox">
+        <span class="active">1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    <section class="conShow">
+        <div class="divShow">1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+    <section class="show">
+        <div class="imgBox">
+            <img src="img/1.jpg" alt="">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+            <img src="img/5.jpg" alt="">
+        </div>
+        <span>
+            <</span> <span>>
+        </span>
+        <ol class="radiusBox">
+            <!-- <li class="active"></li>
+                <li></li>
+                <li></li> -->
+        </ol>
+    </section>
+</body>
+
+</html>
+<!-- 
+    模块化开发得实现 
+        require.js一个js模块异步加载器
+        defer（IE） async="true"  异步加载
+
+        data-main="main"    //js代码得入口文件    (整合所有模块得js文件  不用加.js)
+
+-->
+
+<script src="js/lib/require.js" defer async="true" data-main="js/js/main"></script>

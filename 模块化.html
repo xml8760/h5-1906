@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    /*
+    第一个阶段
+        用script直接调用外部js文件，必须考虑每个文件之间得依赖关系
+            问题：
+                1：过于复杂得模块依赖关系
+                2：造成浏览器假死想象。
+
+
+            模块化开发：
+                ① 实现javascript异步加载，避免页面假死
+                ② 管理模块之间的依赖性，便于代码编写与维护
+                ② 简化过于复杂的模块依赖关系
+
+
+    第二个阶段：
+        commonjs规范  （ nodejs  ）  （ 服务端 ）
+
+
+
+    第三个阶段：
+        AMD   CMD规范       （客户端）
+
+        require.js   是AMD规范得实现
+        sea.js       CMD规范
+
+
+
+    第四个阶段：
+        es6模块化思想
+
+    */
+
+
+
+    var obj = (function(){
+        var name = 'www';
+        function fn(){
+            console.log('1111');
+        }
+        return {
+            init : fn
+        }
+    })()
+
+    obj.init();
+
+
+
+</script>
